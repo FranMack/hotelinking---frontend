@@ -118,7 +118,6 @@ export function Register({message,handlePopUp}:RegisterOptions) {
         password: password,
       })
       .then((response) => {
-        console.log(response);
         onResetForm();
         handlePopUp(message)
         togleRegisterMenu()
