@@ -1,0 +1,41 @@
+@import "../variables";
+
+.not-found-container{
+
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        font-size: 15rem;
+        font-weight: 600;
+        color:$color_white;
+    }
+    h3{
+        font-size: 3rem;
+        font-weight: 400;
+        color:$color_white; 
+    }
+
+    .btn-volver-home{
+        margin-top: 2%;
+        background-color: $color_secundary;
+        padding: 1%;
+        padding-inline: 4%;
+        color:$color_white;
+        font-size: 2rem;
+        font-weight: 500;
+        border-radius: 20px;
+        cursor: pointer;
+
+        &:hover{
+            color:$color_tertiary;
+        }
+    }
+
+
+
+}

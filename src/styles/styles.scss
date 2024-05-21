@@ -1,0 +1,24 @@
+@import "./variables";
+@import "./components/navbar";
+@import "./components/home";
+@import "./components/login";
+@import "./components/footer";
+@import "./components/userCupons";
+@import "./components/notFound";
+@import "./commons//popUp";
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+html{
+    font-size: 62.5%;
+    background-color: $color_primary;
+    overflow-x: hidden;
+
+}

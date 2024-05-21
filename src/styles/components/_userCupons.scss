@@ -1,0 +1,64 @@
+@import "../variables";
+
+.userCupons-container{
+    width: 100vw;
+    min-height: 100vh;
+
+    color:$color_white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        font-size: 6rem;
+        font-weight: 500;
+    }
+   
+
+}
+
+table{
+    margin: 0 auto;
+    margin-top: 10vh;
+    background-color: $color_secundary;;
+    width: 80%;
+    text-align: center;
+    border-collapse: collapse
+    
+}
+
+.campos{
+    font-size: 2.4rem;
+    font-weight: 400;
+    height: 7vh;
+}
+
+tr{
+    font-size: 2rem;
+    height: 6vh;
+    
+}
+
+th, td{
+    border: 1px solid #ddd; /* Estiliza los bordes de las celdas */
+}
+
+
+.promotional-code{
+    font-size: 1.6rem;
+}
+
+.generate-promotionalCode{
+    background-color: $color_primary;
+    padding: 1%;
+    padding-inline: 3%;
+    color:$color_white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.generate-promotionalCode:hover{
+    color: $color_tertiary;
+}

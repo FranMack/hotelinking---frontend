@@ -1,0 +1,170 @@
+@import "../variables";
+
+.home-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+}
+
+.anuncio-container{
+    margin: 0 auto;
+ 
+    margin-top: 10vh;
+    position: relative;
+    width: 80%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border-radius: 15px;
+    
+
+    h1{
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        font-weight:500;
+        margin-left: 5%;
+        color:$color_white;
+        span{
+            color:$color_tertiary;
+            font-weight: 700
+        }
+    }
+    p{
+        color:$color_white;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight:500;
+        margin-left: 5%;
+
+    }
+    .anuncio-background{
+    
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+        border-radius: 15px;
+        
+    }
+
+    .anuncio-hotsale-logo{
+        position: absolute;
+        height: 75%;
+        right: 5%;
+    }
+    
+}
+
+
+.grid-container{
+    margin: 0 auto;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(150px,1fr));
+    gap:20px;
+    justify-items: center;
+   
+}
+
+.grid-card{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 0.66;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    background-color: $color_white;
+    border-radius: 15px;
+    transition: all;
+    transition-duration: 0.5s;
+    &:hover{
+        transform: scale(1.02);
+        box-shadow: 2px 4px 8px $color_tertiary;
+    }
+  
+  
+    img {
+        margin: 0 auto;
+        margin-top: 12%;
+      width: 90%;
+      border-radius: 15px;
+   
+      object-fit: cover;
+
+    }
+    .card-info{
+      
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+       
+        h2{
+            text-transform: capitalize;
+            font-size: 2.5rem;
+            font-weight: 500;
+            color:$color_secundary;
+        }
+        
+        
+        h3{
+            text-transform: capitalize;
+            font-size: 1.6rem;
+        }
+
+        h4{
+            text-transform: capitalize;
+            font-size: 1.5rem;
+            font-weight: normal;
+            text-decoration: line-through;
+        }
+        
+     
+    }
+}
+
+.descuento-container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  $color_secundary;
+    color:$color_white;
+    right: 0;
+    height: 8%;
+    padding: 2%;
+    border-bottom-left-radius: 10px;
+    p{
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+}
+
+.button-cupon{
+    position: absolute;
+    background-color: $color_secundary;
+    width: 80%;
+    color:$color_white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 2%;
+    bottom: 5%;
+    border: none;
+    transition: background-color 0.5s ease;
+    &:hover{
+       background-color: $color_tertiary;
+       color:$color_secundary
+    }
+}
+.home-icon:hover{
+    fill:$color_tertiary
+}

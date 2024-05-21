@@ -1,0 +1,140 @@
+@import "../variables";
+
+
+.login-form {
+  position: absolute;
+  background-color: $color_white;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3vh;
+  margin-top: 3vh;
+  margin-bottom: 4vh;
+  z-index: 2;
+  h3 {
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+    margin-left: 7.5%;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    color:$color_primary;
+  }
+  h6 {
+    margin-left: 7.5%;
+    margin-bottom: 3vh;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+   p {
+    margin-left: 7.5%;
+    margin-bottom: 1.5%;
+       font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    strong{
+      cursor: pointer;
+    }
+  }
+  >input {
+    margin: 0 auto;
+    margin-bottom: 3vh;
+    padding-left: 2%;
+    width: 85%;
+    height: 7vh;
+    font-size: 1.4rem;
+    border: 2px solid $color_primary;;
+    border-radius: 10px;
+    background:$color_white;
+    cursor: pointer;
+  }
+  >.input-error{
+    border:solid 2px red;
+    margin-bottom: 1vh;
+}
+textarea{
+    margin: 0 auto;
+    margin-bottom: 3vh;
+    padding-top: 2%;
+    padding-left: 2%;
+    width: 85%;
+    height: 15vh;
+    font-size: 1.4rem;
+    border: 1px solid rgba(187, 187, 187, 0.30);
+    background:$color_primary;
+}
+
+
+  button {
+    margin: 0 auto;
+    background-color: $color_primary;
+    width: 85%;
+    height: 60px;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: $color_white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.5s ease;
+    &:hover{
+background-color: $color_tertiary;
+color:$color_secundary
+    }
+  }
+}
+
+.closeIcon-container{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  
+}
+
+.login-button-container{
+  margin-bottom: 3vh;
+}
+
+.login-recibir-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7.5%;
+    >p{
+        margin-left: 0;
+        margin-bottom: 3vh;
+    }
+    input{
+        margin-right: 2%;
+        width: 16px; /* Cambia el ancho según tu preferencia */
+    height: 16px;
+     
+    }
+    
+}
+.input-helpers-error,.response-error{
+  color:red;
+    margin-left: 7.5%;
+    margin-bottom: 1.5%;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.response-error{
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+

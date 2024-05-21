@@ -1,0 +1,39 @@
+@import "../variables";
+
+
+.popUp-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30vw;
+    aspect-ratio: 1.5;
+    background-color: $color_white;
+    z-index: 10;
+    margin-top: 10%;
+    h3{
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    button {
+        margin: 0 auto;
+        margin-bottom: 5%;
+        background-color: $color_primary;
+        width: 50%;
+        height: 60px;
+        padding: 16px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: $color_white;
+        cursor: pointer;
+        border-radius: 30px;
+      }
+}
