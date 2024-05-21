@@ -30,7 +30,6 @@ function App() {
         },
       })
       .then((response) => {
-        console.log(response.data);
         setToken(token);
         setEmail(response.data.email);
         setId(response.data.id);
