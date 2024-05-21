@@ -1,12 +1,12 @@
 import { regularExpresions } from "../config/regularExpressions";
 
-export interface UserValidationErrors{
-    [key: string]: string
+export interface UserValidationErrors {
+  [key: string]: string;
 }
 
 export class LoginValidations {
   private constructor(
-       readonly email: string,
+    readonly email: string,
     readonly password: string
   ) {}
 
@@ -15,48 +15,48 @@ export class LoginValidations {
 
     const errors: UserValidationErrors[] = [];
 
-  
-    //email
+    // Validaciones del email
     if (!email) {
       errors.push({
-        email: "Missing email",
+        email: "Falta el correo electrónico",
       });
     }
     if (!regularExpresions.email.test(email)) {
-      errors.push({ email: "Email is not valid" });
+      errors.push({ email: "El correo electrónico no es válido" });
     }
-    //password
+
+    // Validaciones de la contraseña
     if (!password) {
       errors.push({
-        password: "Missing password",
+        password: "Falta la contraseña",
       });
     }
     if (!regularExpresions.contain_special_character.test(password)) {
       errors.push({
-        password: "Password must contain at least one special character",
+        password: "La contraseña debe contener al menos un carácter especial",
       });
     }
     if (!regularExpresions.contain_letter.test(password)) {
       errors.push({
-        password: "Password must contain at least one lowercase letter",
+        password: "La contraseña debe contener al menos una letra minúscula",
       });
     }
     if (!regularExpresions.contain_Capital_leter.test(password)) {
       errors.push({
-        password: "Password must contain at least one capital letter",
+        password: "La contraseña debe contener al menos una letra mayúscula",
       });
     }
     if (!regularExpresions.contain_number.test(password)) {
-      errors.push({ password: "Password must contain at least one number" });
+      errors.push({ password: "La contraseña debe contener al menos un número" });
     }
     if (password.length < 6) {
-      errors.push({ password: "Password is too short" });
+      errors.push({ password: "La contraseña es demasiado corta" });
     }
 
     if (errors.length > 0) {
       return [errors, undefined];
     }
 
-    return [undefined, new LoginValidations( email, password)];
+    return [undefined, new LoginValidations(email, password)];
   }
 }

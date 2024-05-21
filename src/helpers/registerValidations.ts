@@ -1,7 +1,7 @@
 import { regularExpresions } from "../config/regularExpressions";
 
-export interface UserValidationErrors{
-    [key: string]: string
+export interface UserValidationErrors {
+  [key: string]: string;
 }
 
 export class RegisterValidation {
@@ -13,63 +13,66 @@ export class RegisterValidation {
   ) {}
 
   static create(object: { [key: string]: any }): [UserValidationErrors[]?, RegisterValidation?] {
-    const { name, email, password, lastname } = object;
+    const { name, lastname, email, password } = object;
 
     const errors: UserValidationErrors[] = [];
 
-    //name
+    // Validaciones del nombre
     if (!name) {
       errors.push({
-        name: "Missing name",
+        name: "Falta el nombre",
       });
     }
     if (!regularExpresions.only_letters.test(name)) {
-      errors.push({ name: "Name should contain letters and spaces" });
+      errors.push({ name: "El nombre debe contener letras y espacios" });
     }
-    //lastname
+
+    // Validaciones del apellido
     if (!lastname) {
       errors.push({
-        lastname: "Missing lastname",
+        lastname: "Falta el apellido",
       });
     }
     if (!regularExpresions.only_letters.test(lastname)) {
-      errors.push({ lastname: "Name should contain letters and spaces" });
+      errors.push({ lastname: "El apellido debe contener letras y espacios" });
     }
-    //email
+
+    // Validaciones del email
     if (!email) {
       errors.push({
-        email: "Missing email",
+        email: "Falta el correo electrónico",
       });
     }
     if (!regularExpresions.email.test(email)) {
-      errors.push({ email: "Email is not valid" });
+      errors.push({ email: "El correo electrónico no es válido" });
     }
-    //password
+
+    // Validaciones de la contraseña
     if (!password) {
       errors.push({
-        password: "Missing password",
+        password: "Falta la contraseña",
       });
     }
     if (!regularExpresions.contain_special_character.test(password)) {
       errors.push({
-        password: "Password must contain at least one special character",
+        password: "La contraseña debe contener al menos un carácter especial",
       });
     }
     if (!regularExpresions.contain_letter.test(password)) {
       errors.push({
-        password: "Password must contain at least one lowercase letter",
+        password: "La contraseña debe contener al menos una letra minúscula",
       });
     }
     if (!regularExpresions.contain_Capital_leter.test(password)) {
       errors.push({
-        password: "Password must contain at least one capital letter",
+        password: "La contraseña debe contener al menos una letra mayúscula",
       });
     }
     if (!regularExpresions.contain_number.test(password)) {
-      errors.push({ password: "Password must contain at least one number" });
+      errors.push({ password: "La contraseña debe contener al menos un número" });
     }
     if (password.length < 6) {
-      errors.push({ password: "Password is too short" });
+      errors.push({ password: "La contraseña es demasiado corta" });
     }
 
     if (errors.length > 0) {
