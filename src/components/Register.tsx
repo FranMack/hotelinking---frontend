@@ -158,7 +158,7 @@ export function Register({message,handlePopUp}:RegisterOptions) {
   return (
   
      
-      <form onSubmit={handleSubmit} className="login-form" action="">
+      <form onSubmit={handleSubmit} className="login-form efectoReveal" action="">
         <div className="closeIcon-container"><CloseIcon onClick={togleRegisterMenu}/></div>
         <h3>Crea tu cuenta</h3>
         <h6>Ingresa tus datos para registrarte.</h6>

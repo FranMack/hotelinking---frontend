@@ -85,7 +85,7 @@ export function UserCupons() {
         {isLoading ? (
           <h2>Cargando cupones...</h2>
         ) : userCupons.length > 0 ? (
-          <table>
+          <table className="efectoReveal">
             <thead>
               <tr className="campos">
                 <th>Producto</th>

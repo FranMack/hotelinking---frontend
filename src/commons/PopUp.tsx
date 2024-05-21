@@ -13,7 +13,7 @@ export function PopUp({message,handlePopUp,handleNavigate=()=>{}}:PopUpOptions) 
 
   return (
 
-    <div className="popUp-container">
+    <div className="popUp-container efectoReveal">
         <div className="closeIcon-container"><CloseIcon onClick={()=>{handlePopUp("")}}/></div>
 
         <h3>{message}</h3>

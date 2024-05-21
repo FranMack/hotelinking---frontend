@@ -115,14 +115,14 @@ export function Login() {
   };
 
 
-  console.log("XXXXXXXXXXXXXXX",errors)
+
 
   return (
   
       
       <form
         onSubmit={handleSubmit}
-        className="login-form"
+        className="login-form efectoReveal"
         action=""
       >
         <div className="closeIcon-container"><CloseIcon onClick={togleMenu}/></div>

@@ -22,3 +22,22 @@ html{
     overflow-x: hidden;
 
 }
+
+
+.efectoReveal {
+    animation-name: efectoReveal;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes efectoReveal {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
